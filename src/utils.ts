@@ -1,15 +1,11 @@
-export function split(input: string, sep = ",") {
+export function split(input: string, sep = ","): string[] {
   return input.split(sep).map((x) => x.trim());
 }
 
-export function isString(input?: unknown) {
+export function isString(input?: unknown): input is string {
   return typeof input === "string" && input.length > 0;
 }
 
-export function isNumber(input?: unknown) {
-  return typeof input === "string" && input.length > 0 && !isNaN(int(input));
-}
-
-export function int(input: string) {
+export function int(input: string): number {
   return parseInt(input, 10);
 }

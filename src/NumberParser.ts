@@ -1,12 +1,14 @@
 import Parser from "./Parser";
-import { int, isNumber } from "./utils";
+import { isString } from "./utils";
+
+const pattern = /^(0|[1-9][0-9]*)(\.[0-9]+)?$/;
 
 export default class NumberParser implements Parser<number> {
   check(input: string) {
-    return isNumber(input);
+    return isString(input) && pattern.test(input.trim());
   }
 
   apply(input: string) {
-    return int(input.trim());
+    return parseFloat(input.trim());
   }
 }

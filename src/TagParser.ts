@@ -7,7 +7,7 @@ export default class TagParser implements Parser<string[]> {
   }
 
   apply(input: string, previous: string[]) {
-    const tags = split(input);
+    const tags = split(input.trim());
     let list = previous;
     tags.forEach((tag) => {
       if (!list.includes(tag)) list = list.concat(tag);

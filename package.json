@@ -1,6 +1,6 @@
 {
   "name": "@lagdotcom/boring-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parser for an INI-like format.",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^8.8.0",
     "jest": "^27.4.7",
     "ts-jest": "^27.1.3",

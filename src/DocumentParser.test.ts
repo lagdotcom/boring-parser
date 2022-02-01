@@ -28,7 +28,7 @@ const testSource = `
 name: Tim
 level: 3
 lore:Tim is nice, but dim.
-tags:NICE, DIM
+tags:NICE,DIM
 
 name:Chris
 level:11
@@ -46,6 +46,8 @@ describe("document parser", () => {
     expect(tim.name).toBe("Tim");
     expect(tim.lore).toBeDefined();
     expect(tim.level).toBe(3);
+
+    expect(chris.lore).toBeUndefined();
     expect(chris.tags).toStrictEqual(["CRAFTY", "COCKNEY"]);
   });
 });
